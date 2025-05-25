@@ -1,4 +1,4 @@
-package cz.muni.fi.pa165.triolingo.easy;
+package leetcode.easy;
 
 import java.util.Arrays;
 import java.util.HashMap;

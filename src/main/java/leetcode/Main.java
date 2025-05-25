@@ -1,4 +1,4 @@
-package cz.muni.fi.pa165.triolingo;
+package leetcode;
 
 public class Main {
     public static void main(String[] args) {
