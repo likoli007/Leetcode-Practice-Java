@@ -7,7 +7,7 @@ import java.util.HashMap;
     https://leetcode.com/problems/two-sum/description/
  */
 
-class Solution {
+class Task1Solution {
     public int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i+1; j < nums.length; j++){
@@ -41,7 +41,7 @@ class Solution {
 
 class Main {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Task1Solution solution = new Task1Solution();
         System.out.println(Arrays.toString(solution.twoSum(new int[]{2, 7, 11, 15}, 9)));
         System.out.println(Arrays.toString(solution.twoSumHash(new int[]{2, 7, 11, 15}, 9)));
     }
