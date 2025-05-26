@@ -14,6 +14,8 @@ class Task9Solution {
     // solves the idea 1 problem by just simply querying i and length-i until midpoint of array
     // two passes, one to populate array one to evaluate
 
+    // idea 3, reverse the number
+    // we don't need to use a data structure for this, simply rebuild the number from its reverse and compare
 
     public boolean isPalindrome(int x) {
         ArrayList<Integer> array = new ArrayList<>();
@@ -42,6 +44,29 @@ class Task9Solution {
         }
         return true;
     }
+
+    public boolean isPalindromeArrayless(int x){
+        if (x < 0){
+            return false;
+        }
+
+        if (x == 0){
+            return true;
+        }
+
+        int reverse = 0;
+        int copy = x;
+
+        while (copy != 0){
+            int remainder = copy % 10;
+
+            reverse = reverse * 10 + remainder;
+            copy = copy / 10;
+        }
+
+        return (reverse == x);
+    }
+
 }
 
 public class Task9_PalindromeNumber {
@@ -49,5 +74,6 @@ public class Task9_PalindromeNumber {
         Task9Solution solution = new Task9Solution();
 
         System.out.println(solution.isPalindrome(121));
+        System.out.println(solution.isPalindromeArrayless(121));
     }
 }
